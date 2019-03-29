@@ -19,8 +19,8 @@ class Kuesioner_app extends CI_Model {
 
 		return $query;
 	}
-	public function get_data_dosen_pilihan(){
-		$query = $this->db->query('SELECT dos.* FROM dosen dos LEFT JOIN pilihan pil ON dos.nip=pil.nip WHERE NOT EXISTS(SELECT * FROM pilihan pil WHERE pil.nip=dos.nip) ORDER BY nama ASC')->result_array();
+	public function get_data_dosen_pilihan($nim){
+		$query = $this->db->query('SELECT dos.* FROM dosen dos LEFT JOIN pilihan pil ON dos.nip=pil.nip WHERE NOT EXISTS(SELECT * FROM pilihan pil WHERE pil.nip=dos.nip and pil.nim='.$nim.') ORDER BY nama ASC')->result_array();
 		return $query;
 	}
 
