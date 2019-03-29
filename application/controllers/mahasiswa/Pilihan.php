@@ -25,7 +25,7 @@ class Pilihan extends CI_Controller {
     public function add(){
      $data = array(
             'title' 	=> 'Isi Pilihan | Website Kuesioner',
-            'dosen' 	=> $this->kuesioner_app->get_data_dosen_pilihan()
+            'dosen' 	=> $this->kuesioner_app->get_data_dosen_pilihan($this->session->userdata('nim'))
             );
 
     $this->load->view('pages/header', $data);
@@ -33,6 +33,7 @@ class Pilihan extends CI_Controller {
     $this->load->view('pages/sidebar');
     $this->load->view('mahasiswa/add', $data);
     $this->load->view('pages/footer');
+
     }
     public function pilihan_add(){
         $pilih=$this->input->post('pilihan');
