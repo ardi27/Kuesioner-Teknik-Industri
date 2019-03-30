@@ -2,7 +2,7 @@
         <div id="page-wrapper">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="page-header">Kuesioner Jurusan Teknik industri</h1>
+            <h1 class="page-header">Kuesioner Penilaian Dosen Jurusan Teknik industri</h1>
         </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->
     <div class="row">
@@ -18,7 +18,7 @@
                                     
                                     <?php if($this->session->userdata('role')=='1') :?>
                                     <?php foreach ($alumni as $alumni) : ?>
-                                    <h2><b>identitas Mahasiswa</b></h2>
+                                    <h2><b>Identitas Mahasiswa</b></h2>
                                     <hr>
                                     <div class="form-group">
                                         <label>NiM<?php echo form_error('nim'); ?></label>
@@ -51,7 +51,7 @@
 <?php endif; ?>
                                     <?php if($this->session->userdata('role')=='2'): ?>
                                     <?php foreach ($alumni as $alumni) : ?>
-                                    <h2><b>identitas Dosen</b></h2>
+                                    <h2><b>Identitas Dosen</b></h2>
                                     <hr>
                                     <div class="form-group">
                                         <label>NiM<?php echo form_error('nim'); ?></label>
@@ -88,11 +88,11 @@ foreach ($dosen as $row) : ?>
 <input type="hidden" name="nip<?= $i ?>" value="<?= $row['nip'] ?>">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h2><b>Kuesioner Penilaian Dosen</b></h2>
+                                            <h2><b>KOMPETENSI PEDAGOGIK</b></h2>
                                                 <table class="table table-bordered">
                                                 <tr>
                                                     <th rowspan="2"><center><p style="margin-top:15px">No</p></center></th>
-                                                    <th rowspan="2"><center><p style="margin-top:15px">indikator Penilaian</p></center></th>
+                                                    <th rowspan="2"><center><p style="margin-top:15px">Pernyataan</p></center></th>
                                                     <th colspan="4"><center><?= $row['nama'] ?></center></th>
                                                 </tr>
                                                 <tr>
@@ -103,7 +103,7 @@ foreach ($dosen as $row) : ?>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>integritas (Etika & Moral)</td>
+                                                    <td>Dosen menyampaikan dan memberikan silabus dan SAP pada ertemuan pertama perkuliahan</td>
                                                     <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="4"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="3"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="2"></center></td>
@@ -111,7 +111,7 @@ foreach ($dosen as $row) : ?>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td>Keahlian berdasarkan bidang ilmu (profesionalisme)</td>
+                                                    <td>Dosen membuat kontrak perkuliahan dengan mahasiswa</td>
                                                     <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="4"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="3"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="2"></center></td>
@@ -119,7 +119,7 @@ foreach ($dosen as $row) : ?>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
-                                                    <td>Bahasa inggris</td>
+                                                    <td>Dosen menyiapkan hand out/ringkasan materi perkuliahan</td>
                                                     <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="4"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="3"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="2"></center></td>
@@ -127,7 +127,7 @@ foreach ($dosen as $row) : ?>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
-                                                    <td>Penggunaan Teknologi informasi</td>
+                                                    <td>Dosen memanfaatkan media pembelajaran untuk meningkatkan pemahaman mahasiswa</td>
                                                     <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="4"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="3"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="2"></center></td>
@@ -135,7 +135,7 @@ foreach ($dosen as $row) : ?>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
-                                                    <td>Komunikasi</td>
+                                                    <td>Dosen menyampaikan pesan moral, etika, dan disiplin dalam perkuliahan</td>
                                                     <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="4"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="3"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="2"></center></td>
@@ -143,7 +143,7 @@ foreach ($dosen as $row) : ?>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
-                                                    <td>Kerjasama tim</td>
+                                                    <td>Dosen memberikan kuis, tugas, dan ujian sesuai dengan materi perkuliahan yang diberikan</td>
                                                     <td><center><input type="radio" name="<?= 'mp6'.$i ?>" value="4"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp6'.$i ?>" value="3"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp6'.$i ?>" value="2"></center></td>
@@ -151,15 +151,203 @@ foreach ($dosen as $row) : ?>
                                                 </tr>
                                                 <tr>
                                                     <td>7</td>
-                                                    <td>Pengembangan diri</td>
+                                                    <td>Dosen mengajarsesuai dengan jadwal yang ditetapkan</td>
                                                     <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="4"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="3"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="2"></center></td>
                                                     <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="1"></center></td>
                                                 </tr>
                                                 </table>
+                                                <h2><b>KOMPETENSI PROFESIONAL</b></h2>
+                                                <table class="table table-bordered">
+                                                <tr>
+                                                    <th rowspan="2"><center><p style="margin-top:15px">No</p></center></th>
+                                                    <th rowspan="2"><center><p style="margin-top:15px">Pernyataan</p></center></th>
+                                                    <th colspan="4"><center><?= $row['nama'] ?></center></th>
+                                                </tr>
+                                                <tr>
+                                                    <td><center>Sangat Baik</center></td>
+                                                    <td><center>Baik</center></td>
+                                                    <td><center>Cukup</center></td>
+                                                    <td><center>Kurang</center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Dosen selalu mengawali perkuliahan dengan pembukaan yang menarik</td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>Dosen dalam menyampaikan materi kuliah menyenangkan</td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Dosen menguasai dan menyampaikan materi kuliah dengan sangat jelas</td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td>Dosen selalu memberikan pertanyaan pada materi kuliah yang telah disampaikan </td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12</td>
+                                                    <td>2 Setiap selesai menyampaikan materi kuliah dosen selalu memberi kesempatan untuk tanya jawab</td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>13</td>
+                                                    <td>Dosen selalu memberikan motivasi agar mahasiswa berpartisipasi aktif</td>
+                                                    <td><center><input type="radio" name="<?= 'mp6'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp6'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp6'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp6'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14</td>
+                                                    <td>Dosen mampu menciptakan kelas yang tertib dan aktif</td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>15</td>
+                                                    <td>Dosen memiliki banyak referensi dalam materi perkuliahan</td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>16</td>
+                                                    <td>Dosen memberikan materi perkuliahan secara sistematis </td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp7'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                </table>
+                                                <h2><b>KOMPETENSI KEPRIBADIAN</b></h2>
+                                                <table class="table table-bordered">
+                                                <tr>
+                                                    <th rowspan="2"><center><p style="margin-top:15px">No</p></center></th>
+                                                    <th rowspan="2"><center><p style="margin-top:15px">Pernyataan</p></center></th>
+                                                    <th colspan="4"><center><?= $row['nama'] ?></center></th>
+                                                </tr>
+                                                <tr>
+                                                    <td><center>Sangat Baik</center></td>
+                                                    <td><center>Baik</center></td>
+                                                    <td><center>Cukup</center></td>
+                                                    <td><center>Kurang</center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>17</td>
+                                                    <td>Dosen melaksanakan perkuliahan di lokal sesuai dengan jadwal yang ditetapkan</td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>18</td>
+                                                    <td>Dosen bersedia meluangkan waktu konsultasi perkuliahan di luar jam pelajaran</td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>19</td>
+                                                    <td>Dosen memiliki akhlak dan kepribadian yang baik</td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20</td>
+                                                    <td>Dosen arif dalam mengambil keputusan</td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21</td>
+                                                    <td>Dosen mampu mengendalikan diri dalam setiap kondisi</td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp5'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                </table>
+                                                <h2><b>KOMPETENSI SOSIAL</b></h2>
+                                                <table class="table table-bordered">
+                                                <tr>
+                                                    <th rowspan="2"><center><p style="margin-top:15px">No</p></center></th>
+                                                    <th rowspan="2"><center><p style="margin-top:15px">Pernyataan</p></center></th>
+                                                    <th colspan="4"><center><?= $row['nama'] ?></center></th>
+                                                </tr>
+                                                <tr>
+                                                    <td><center>Sangat Baik</center></td>
+                                                    <td><center>Baik</center></td>
+                                                    <td><center>Cukup</center></td>
+                                                    <td><center>Kurang</center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>22</td>
+                                                    <td>Dosen menghargai setiap pendapat dan ide mahasiswa</td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp1'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>23</td>
+                                                    <td>Dosen mengenal mahasiswa dengan baik</td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp2'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>24</td>
+                                                    <td>Dosen bersikap toleran terhadap keberagaman mahasiswa</td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp3'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>25</td>
+                                                    <td>Dosen mampu menerima kritik dan saran</td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="4"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="3"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="2"></center></td>
+                                                    <td><center><input type="radio" name="<?= 'mp4'.$i ?>" value="1"></center></td>
+                                                </tr>
+                                                </table>
+
                                             </div>
                                         </div>
+                                        <hr>
 <?php 
 $i++;
 endforeach; ?>
